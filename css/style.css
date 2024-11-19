@@ -283,7 +283,7 @@ html::-webkit-scrollbar-thumb{
   .search-bar {
     border-radius: 22px
     flex-wrap: wrap; 
-    padding: 5px;
+    padding: 10px;
   }
 
   .input-group {
@@ -299,7 +299,7 @@ html::-webkit-scrollbar-thumb{
 
 @media (max-width: 480px) {
   .search-bar {
-    padding: 3px;
+    padding: 5px;
     border-radius: 15px
     gap: 5px; 
   }
