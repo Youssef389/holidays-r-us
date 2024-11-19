@@ -288,12 +288,12 @@ html::-webkit-scrollbar-thumb{
 
   .input-group {
     flex: 1 1 calc(50% - 10px); 
-    max-width: 94%;
+    max-width: 96%;
   }
 
   .search-btn {
     flex: 1 1 calc(100% - 10px); 
-    max-width: 94%;
+    max-width: 96%;
   }
 }
 
