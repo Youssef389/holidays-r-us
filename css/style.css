@@ -174,13 +174,13 @@ html::-webkit-scrollbar-thumb{
 
   margin-top: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  gap: 10px; 
-  flex-wrap: wrap; 
+  gap: 10px; /* Space between items */
+  flex-wrap: wrap; /* Wrap items when needed */
 }
 
 .input-group {
-  flex: 1;
-  max-width: 35rem; 
+  flex: 1; /* Allows groups to shrink and grow */
+  max-width: 35rem; /* Maintain consistent width on larger screens */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,12 +189,12 @@ html::-webkit-scrollbar-thumb{
   padding-right: 0;
   border-radius: 25px;
   background: #f5f5f5;
-  min-width: 180px;
+  min-width: 180px; /* Ensure it doesn't shrink too much */
 }
 
 .dates {
-  flex: 1; 
-  max-width: 35rem;
+  flex: 1; /* Allows groups to shrink and grow */
+  max-width: 35rem; /* Maintain consistent width on larger screens */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,7 +202,7 @@ html::-webkit-scrollbar-thumb{
   
   border-radius: 25px;
   background: #f5f5f5;
-  min-width: 350px;
+  min-width: 350px; /* Ensure it doesn't shrink too much */
 }
 
 .input-group i.icon {
@@ -216,7 +216,7 @@ html::-webkit-scrollbar-thumb{
   outline: none;
   background: none;
   font-size: 14px;
-  min-width: 100px; 
+  min-width: 100px; /* Ensure inputs stay usable on small screens */
 }
 
 .input-group span {
@@ -250,7 +250,7 @@ html::-webkit-scrollbar-thumb{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1; 
+  flex: 1; /* Ensure button adjusts flexibly */
   max-width: 35rem;
 }
 
@@ -262,44 +262,44 @@ html::-webkit-scrollbar-thumb{
   background: #219150;
 }
 
-
+/* Responsive Design */
 @media (max-width: 1024px) {
   .search-bar {
-    gap: 5px; 
+    gap: 5px; /* Reduce spacing between elements */
     border-radius: 30px
   };
 
   .input-group {
-    flex: 1 1 calc(33.33% - 10px);
-    max-width: 100%;
+    flex: 1 1 calc(33.33% - 10px); /* Adjust groups to fit better */
+    max-width: 100%; /* Allow inputs to scale fully */
   }
 
   .search-btn {
-    flex: 1 1 calc(100% - 20px);
+    flex: 1 1 calc(100% - 20px); /* Full width on smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .search-bar {
     border-radius: 22px
-    flex-wrap: wrap; 
-    padding: 10px;
+    flex-wrap: wrap; /* Allow elements to stack */
+    padding: 5px;
   }
 
   .input-group {
-    flex: 1 1 calc(50% - 10px); 
-    max-width: 96%;
+    flex: 1 1 calc(50% - 10px); /* Two items per row */
+    max-width: 94%;
   }
 
   .search-btn {
-    flex: 1 1 calc(100% - 10px); 
-    max-width: 96%;
+    flex: 1 1 calc(100% - 10px); /* Full width button */
+    max-width: 94%;
   }
 }
 
 @media (max-width: 480px) {
   .search-bar {
-    padding: 5px;
+    padding: 3px;
     border-radius: 15px
     gap: 5px; 
   }
@@ -1502,4 +1502,156 @@ form button:hover {
       padding: 10px 0;
       color: var(--font-col);
   }
+}
+.property-details {
+  margin: 2em 0;
+}
+
+.property-details h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-top: 6rem;
+}
+
+.property-details .location {
+  color: #888;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.property-images {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.property-images .main-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.property-images .thumbnail-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.property-images .thumbnail-images img {
+  width: 24%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.property-images .thumbnail-images img:hover {
+  transform: scale(1.05);
+}
+
+.booking-info {
+  display: flex;
+  justify-content: space-between;
+  text-align:left;
+  margin-top: 5rem;
+  font-size: 1.4rem;
+}
+
+.description, .booking-form {
+  width: 48%;
+
+}
+
+.description h2, .booking-form h3 {
+  color: #000;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.booking-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.booking-form button{
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  text-align: center;
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 1rem 4.5rem;
+  border-radius: 5rem;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.booking-form button::before,
+.booking-form button::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #4A79E7;
+  z-index: -1;
+  transition: .3s linear;
+}
+
+.booking-form button::before{
+  left: 0;
+}
+
+.booking-form button::after{
+  right: 0;
+}
+
+.booking-form button:hover:before,
+.booking-form button:hover::after{
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .booking-info {
+    flex-direction: column;
+  }
+
+  .description, .booking-form {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .property-images .thumbnail-images img {
+    width: 22%;
+  }
+}
+
+.iframe-container {
+  width: 100%;
+  max-width: 800px; 
+  aspect-ratio: 16 / 9; 
+  margin: auto;
+  display: block;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
